@@ -1,182 +1,220 @@
- [![astro](https://user-images.githubusercontent.com/3611928/167888733-9bf21eda-d051-46f3-9184-12b14e21a10a.png)](https://ntl.fyi/3LZGn73)
 
-# Astro Quickstart Template   
+<html lang="pt-BR">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="theme-color" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+  <link rel="icon" href="https://raw.githubusercontent.com/jose9898/jose9898/main/20221031_153020.png" sizes="32x32"> 
+  <link rel="icon" href="https://raw.githubusercontent.com/jose9898/jose9898/main/20221031_153020.png" sizes="192x192"> 
+  <link rel="apple-touch-icon-precomposed" href="https://raw.githubusercontent.com/jose9898/jose9898/main/20221031_153020.png"> 
+  <meta name="msapplication-TileImage" content="https://raw.githubusercontent.com/jose9898/jose9898/main/20221031_153020.png"> 
+  <title>Vnet ilimitada</title> 
+  <meta name="description" content="Internet ilimitada por apenas 15 reais mensais!">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300|Nunito:700" rel="stylesheet"> 
 
-This is a bare-bones Astro project that has everything you need to quickly deploy it to [Netlify](https://netlify.com). 
+<!-- Styles -->
+<style>
+        html, body {
+            background: "" ;
+            color: #fff;
+            overflow: auto;
+	    font-family: 'Nunito Sans', sans-serif;
+            font-weight: 300;
+            height: 100vh;
+            margin: 0;
+        }
 
-Hate reading, here's a video: https://youtu.be/SknFflQVOys!
+        ::-webkit-scrollbar-track {
+    	   background-color: #111111;
+}
+	::-webkit-scrollbar {
+   	   width: auto;
+    	   background: #111111;
+}
+	::-webkit-scrollbar-thumb {
+   	     background: #111111;
+}
 
-Love reading, here's blog post: www.netlify.app/blog/deploy-your-astro-project-fast/!
+	.full-height {
+            height: 100vh;
+        }
 
-## Table of Contents:
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
 
-- [Quick Setup + Deploy Option](#quick-setup--deploy-option)
-- [Regular Setup](#regular-setup)
-  - [Cloning + Install Packages](#1-cloning--install-packages)
-  - [Deploying](#2-deploying)
-- [Astro + Netlify Resources](#astro--netlify-resources)
-- [Project Structure](#project-structure)
-- [Styling](#styling)
-  - [Notes on Styling](#notes-on-styling)
-  - [Remove Styling](#remove-styling)
-- [Commands](#commands)
-- [Testing](#testing)
-  - [Included Default Testing](#included-default-testing)
-  - [Removing Renovate](#removing-renovate)
-  - [Removing Cypress](#removing-cypress)
-- [Want to learn more?](#want-to-learn-more)
+        .position-ref {
+            position: relative;
+        }
 
-## Quick Setup + Deploy Option
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
 
-Click this button and it will help you create a new repo, create a new Netlify project, and deploy!
+        .content {
+            text-align: center;
+            font-size: 22px;
+        }
 
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/astro-quickstart)
+        .title {
+            font-family: 'Nunito', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
 
-## Regular Setup
+        .links > a {
+            color: black;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
 
- ### 1. Cloning + Install Packages
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+   
+      .footer {
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+.Down {
+   background: #116C00;
+   background-image: -webkit-linear-gradient(top, #116C00, #116C00);
+   background-image: -moz-linear-gradient(top, #116C00, #116C00);
+   background-image: -ms-linear-gradient(top, #116C00, #116C00);
+   background-image: -o-linear-gradient(top, #116C00, #116C00);
+   background-image: -webkit-gradient(to bottom, #116C00, #116C00);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   height: 14px;
+   line-height: 14px;
+   color: #FFFFFF;
+   font-family: Times New Roman;
+   width: 185px;
+   font-size: 20px;
+   font-weight: 900;
+   padding: 12px;
+   -webkit-box-shadow: 1px 1px 6px 0 #99C624;
+   -moz-box-shadow: 1px 1px 6px 0 #99C624;
+   box-shadow: 1px 1px 6px 0 #99C624;
+   text-shadow: 1px 1px 6px #000000;
+   border: solid #99C624 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
 
-  - Clone this repo with one of these options:
+.Down:hover {
+   border: solid #00FF12 1px;
+   background: #29FF00;
+   background-image: -webkit-linear-gradient(top, #29FF00, #59FF00);
+   background-image: -moz-linear-gradient(top, #29FF00, #59FF00);
+   background-image: -ms-linear-gradient(top, #29FF00, #59FF00);
+   background-image: -o-linear-gradient(top, #29FF00, #59FF00);
+   background-image: -webkit-gradient(to bottom, #29FF00, #59FF00);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   text-decoration: none;
+}
+    </style>
 
-    - Click the 'Use this template' button at the top of the page
-    - Or via the command line `git clone https://github.com/netlify-templates/astro-quickstart`
+<style type="text/css">
+.whatsapp {
+    position: fixed;
+    bottom: 23%;
+    left: 1%;
+    padding: 10px;
+    z-index: 10000000;
+}
+</style>
 
-  - Then install the necessary packages and run the project locally to make sure everything works.
+</style>
 
-    ```bash
-    npm install
-    npm run dev
-    ```
+<link href="A.base_play.php,qcor=06A9CB.pagespeed.cf.HyG8qvrI0_.css" rel="stylesheet" type="text/css"/>
+<style>
+	body{
+		background-color: #111111;
+        width:100%;
+        margin-left:auto%;
+        margin-right:auto;
+	}	
+	.capa_cd{
+    	-webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+<script type="text/javascript">var auto_refresh=setInterval(function(){$('#tocando').load('tocando_novo.php?porta=7226&ip=03.stmip.in').fadeIn("slow");},5000);</script>
+<script type="text/javascript">var auto_refresh=setInterval(function(){$('#foto').load('foto_novo.php?porta=7226&ip=03.stmip.in').fadeIn("slow");},5000);</script>
+	
 
-  > Alternatively, you can run this locally with [the Netlify CLI](https://docs.netlify.com/cli/get-started/)'s by running the `netlify dev` command for more options like receiving a live preview to share (`netlify dev --live`) and the ability to test [Netlify Functions](https://www.netlify.com/products/functions) and [redirects](https://docs.netlify.com/routing/redirects/). 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8404736626196833"
+     crossorigin="anonymous"></script>
 
-  ### 2. Deploying
-  - Install the Netlify CLI globally `npm install netlify-cli -g`
-    
-  - Run `npm run build`
-
-  - Then use the `netlify deploy` for a deploy preview link or `netlify deploy --prod` to deploy to production
-
-  Here are a few other ways you can deploy this template:
-    
-  - Use the Netlify CLI's create from template command `netlify sites:create-template astro-quickstart` which will create a repo, Netlify project, and deploy it
-    
-  - If you want to utilize continuous deployment through GitHub webhooks, run the Netlify command `netlify init` to create a new project based on your repo or `netlify link` to connect your repo to an existing project
-
-## Astro + Netlify Resources
-
-Here are some resources to help you on your Astro + Netlify coding fun!
-
-- [Astro on Netlify Integration Page](https://docs.netlify.com/integrations/frameworks/astro)
-
-- [Build wicked fast sites with Astro: An Introduction](https://www.netlify.com/blog/2021/07/08/build-wicked-fast-sites-with-astro-an-introduction/#main)
-
-- [A Template for Building Shopify Stores with Astro and the Storefront API](https://www.netlify.com/blog/2021/07/23/build-a-modern-shopping-site-with-astro-and-serverless-functions)
-
-Hope this template helps :) Happy coding 👩🏻‍💻!
-
----
-
-## Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Layout.astro
-│   ├── pages/
-│   │   └── index.astro
-│   └── style/
-│       └── demo-styling.css
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## Styling
-
-We've added some modern styling to this template using css within an external stylesheet, this will allow you to easily remove our styling and add in your own. 
-
-If you decide that you want to keep our styling you can review our style notes below. 
-
-### Notes on Styling
-
-The variables below give you the ability to change the gradient colors of the blobs and are interpolated into the URL string of the background-img within the body. 
-
-```css
-// Controls the blob blur gradient colors within the main tag's svg
---top-right-blur-1: #20C6B7;
---top-right-blur-2: #4D9ABF;
---bttm-left-blur-1: #FF5C02;
---bttm-left-blur-2: #FFCDB1;
-```
-
-### Remove Styling
-
-If you decide that our styling is not for you, all you'll need to do is remove the [demo-styling.css](https://github.com/netlify-templates/astro-quickstart/tree/main/src/style/demo-styling.css) file. 
+</head>
 
 
-## Commands
+<body>
 
-All commands are run from the root of the project, from a terminal:
+<center>
+			
+<table border="0">
+<div><br>
+<center>
+<font size="6" >Internet ilimitada</font>
+<div><b>Por apenas 15 reais mensais ou 35 reais por 3 meses, você tem acesso ilimitado a Internet para todos os jogos e aplicativos! Aproveite!</b></th>     
+    </tr>
+</table>
+<th style="width:50%;"><img src="https://raw.githubusercontent.com/jose9898/jose9898/main/20221031_143304.png" alt="Vnet ilimitada" width=40%></th> <div><a href="https://github.com/jose9898/app-link-de-atualiza-o-/blob/main/VNET%20VIP.apk?raw=true" class="Down">Download</a><div>
+<div><marquee width="10%" loop="infinite" direction="left" behavior="alternate">
+👉</marquee><a class="link" href="https://wa.me/5598991559428">Peça um teste gratuito!</a> <marquee width="10%" direction="right" loop="infinite" behavior="alternate">👈</marquee>
+<div>
+   <br><div>
+   ℹ️ Como Funciona? <div>
+   <br><div{
+• Abra o app que você instalou.<div>
+• Selecione sua operadora.<div>
+• Digite o usuário e a senha recebida no botão teste.<div>
+• Ligue dados móveis e Desligue Wi-fi<div>
+• Antes de testa certifique que o chip está sem internet<div>
+• Clique em Iniciar.<div>
+• Deve aparecer liberado internet, faça um bom teste.<div>
+• caso queira adiquir é só fazer o pagamento que o envio é automático. <div>
+  <br><div>
+<b>Requisitos:</b><div>
+Sistema operacional <u>Android</u> <div>Operadoras <u>Vivo</u>, <u>Tim</u> e <u>Oi</u>.
 
-| Command           | Action                                       |
-| :---------------- | :------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
+<div><b>Vnet ilimitada:</b><div>
+A melhor internet ilimitada </u> <div>Para nossos clientes aproveite </u>.
 
-## Testing
 
-### Included Default Testing
+<div><br></div></div></div> 
 
-We’ve included some tooling that helps us maintain these templates. This template currently uses:
 
-- [Renovate](https://www.mend.io/free-developer-tools/renovate/) - to regularly update our dependencies
-- [Cypress](https://www.cypress.io/) - to run tests against how the template runs in the browser
-- [Cypress Netlify Build Plugin](https://github.com/cypress-io/netlify-plugin-cypress) - to run our tests during our build process
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://wa.me/5598991559428/" style="position:fixed;width:60px;height:60px;bottom:2%;right:4%;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:40px;box-shadow: 1px 1px 2px #888;
+  z-index:1000;" target="_blank">
+<i style="margin-top:10px" class="fa fa-whatsapp"></i>
+</a>
 
-If your team is not interested in this tooling, you can remove them with ease!
-
-### Removing Renovate
-
-In order to keep our project up-to-date with dependencies we use a tool called [Renovate](https://github.com/marketplace/renovate). If you’re not interested in this tooling, delete the `renovate.json` file and commit that onto your main branch.
-
-### Removing Cypress
-
-For our testing, we use [Cypress](https://www.cypress.io/) for end-to-end testing. This makes sure that we can validate that our templates are rendering and displaying as we’d expect. By default, we have Cypress not generate deploy links if our tests don’t pass. If you’d like to keep Cypress and still generate the deploy links, go into your `netlify.toml` and delete the plugin configuration lines:
-
-```diff
-[[plugins]]
-  package = "netlify-plugin-cypress"
--  [plugins.inputs.postBuild]
--    enable = true
--
--  [plugins.inputs]
--    enable = false 
-```
-
-If you’d like to remove the `netlify-plugin-cypress` build plugin entirely, you’d need to delete the entire block above instead. And then make sure sure to remove the package from the dependencies using:
-
-```bash
-npm uninstall -D netlify-plugin-cypress
-```
-
-And lastly if you’d like to remove Cypress entirely, delete the entire `cypress` folder and the `cypress.config.ts` file. Then remove the dependency using:
-
-```bash
-npm uninstall cypress
-```
-
-## Want to learn more?
-
-Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).
+<div class="footer">Vnet Oficial<div>
+</body>
+</html>
